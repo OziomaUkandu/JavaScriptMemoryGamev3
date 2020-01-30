@@ -20,7 +20,7 @@
       background: #3cb0fd;
       text-decoration: none;
     }
-	
+
 	.flipImage{
 	    width:100px;
 	}
@@ -43,6 +43,9 @@
 <script>
 var tileImages = [];
 var tileArray = [];
+var tileFlippedOver = [];
+var cardFlipped = -1;
+var timer = '';
 var startButton = document.getElementById("start");
 var gameBoard = document.getElementById('gameboard');
 var gamePlay = false;
@@ -52,7 +55,7 @@ startButton.addEventListener('click',startGame)
 
 //Functions
 function startGame(){
-startButton.style.display='none';
+startButton.style.display
 if(!gamePlay){
    gamePlay = true;
    buildArray();
@@ -67,29 +70,93 @@ console.log('started')
 function buildBoard(){
  var html = "";
 for(var x = 0; x <= (tileArray.length - 1); x++){
-    
+
 	html += '<div class= "gameTile"><div class= "gameTile">';
-    html+=  '<img id= "cards '+x+'" src="images/back.jpg" onclick="pickCard('+x+')" class="flipImage"</div></div>';
+    html+=  '<img id= "cards '+x+'" src="images/back.jpg" onclick="pickCard('+x+',this)" class="flipImage"</div></div>';
 
 }
     gameBoard.innerHTML = html;
 }
+function isinArray(v,array){
 
+return array.indexOf(v) >- 1;
+
+}
+
+function pickCard(tileIndex,t){
+console.log(tileIndex);
+console.log(cardFlipped);
+console.log(t.src);
+
+ if(!isinArray(t.id,tileFlippedOver)){
+  console.log('not in array');
+
+ if(cardFlipped >= 0){
+ cardFlip(t,tileIndex);
+
+ t.src ="images/"+tileArray[tileIndex];
+ tileFlippedOver.push(t.id);
+ var secondCard = tileIndex;
+  //check if they match
+
+if(tileFlippedOver[tileFlippedOver.length - 1] == tileFlippedOver[tileFlippedOver - 2]){
+//both cards match
+
+ console.log('Match');
+}else{
+
+ console.log('No Match');
+ timer = setInterval(hideCard,3000);
+//both cards dnt match
+
+}
+
+   //card 2 is flipped over
+
+   console.log('second',cardFlipped);
+ }else{
+ //1st card is flipped
+	 cardFlipped = tileIndex;
+	   cardFlip(t,tileIndex);
+ console.log('first',cardFlipped);
+ }
+
+  }else{
+  console.log('in array')
+ }
+}
 function buildArray(){
 for(var x = 1; x < 7; x++){
 tileImages.push(x + '.jpg');
  }
 }
+function cardFlip(t,ti){
+t.src ="images/"+tileArray[ti];
+	    tileFlippedOver.push(t.id);
+
+
+}
+function hideCard(){
+for(var x=0; x<2; x++){
+
+
+
+var vid = tileFlippedOver.pop();
+document.getElementById(vid).src = "images/back.jpg"
+console.log(vid)
+  }
+  clearInterval(timer);
+}
 
 function shuffleArray(array){
    for(var x = array.length -1;x > 0; x--){
-       
+
 	   //gets a random value
 	   //quick swap as we shift through the array
        var holder = Math.floor(Math.random() * (x+1));
        var itemValue = array[x];
        array[x] = array[holder];
-       array[holder] = itemValue;  
+       array[holder] = itemValue;
 	   console.log(itemValue);
    }
    return array;
