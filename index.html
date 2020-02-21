@@ -1,101 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <title>Memory Game</title>
-	 <style>
-	 .btn {
-      background: #3498db;
-      text-align: center;
-      -webkit-border-radius: 28;
-      -moz-border-radius: 28;
-      border-radius: 28px;
-      font-family: Arial;
-      color: #ffffff;
-      font-size: 20px;
-      padding: 10px 20px 10px 20px;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background: #3cb0fd;
-      text-decoration: none;
-    }
-	
-	.flipImage{
-	    width:100px;
-	}
-	.gameTile{
-	  display:inline-block;
-	  border:1px solid black;
-	}
-	 </style
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div id="wrapper">
-   <div id="start">Start Shannon</div>
-   <div id="score"></div>
-   <div id="message"></div>
-   <div id="gameboard"></div>
-</div>
-
-<script>
-var tileImages = [];
-var tileArray = [];
-var startButton = document.getElementById("start");
-var gameBoard = document.getElementById('gameboard');
-var gamePlay = false;
-
-//Event Listeners
-startButton.addEventListener('click',startGame)
-
-//Functions
-function startGame(){
-startButton.style.display='none';
-if(!gamePlay){
-   gamePlay = true;
-   buildArray();
-   tileArray = tileImages.concat(tileImages);
-   shuffleArray(tileArray);
-   buildBoard();
-   console.log(tileArray);
-}
-console.log('started')
-}
-
-function buildBoard(){
- var html = "";
-for(var x = 0; x <= (tileArray.length - 1); x++){
-    
-	html += '<div class= "gameTile"><div class= "gameTile">';
-    html+=  '<img id= "cards '+x+'" src="images/back.jpg" onclick="pickCard('+x+')" class="flipImage"</div></div>';
-
-}
-    gameBoard.innerHTML = html;
-}
-
-function buildArray(){
-for(var x = 1; x < 7; x++){
-tileImages.push(x + '.jpg');
- }
-}
-
-function shuffleArray(array){
-   for(var x = array.length -1;x > 0; x--){
-       
-	   //gets a random value
-	   //quick swap as we shift through the array
-       var holder = Math.floor(Math.random() * (x+1));
-       var itemValue = array[x];
-       array[x] = array[holder];
-       array[holder] = itemValue;  
-	   console.log(itemValue);
-   }
-   return array;
-}
-</script>
-
+  <div id="wrapper">
+    <div id="start" class="btn">Start</div>
+    <div id="score"></div>
+    <div id="message"></div>
+    <div stlye="main"><div id="gameboard"></div></div>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
