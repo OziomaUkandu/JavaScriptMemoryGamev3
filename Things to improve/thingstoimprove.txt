@@ -1,0 +1,7 @@
+Score
+You can set a variable and store it to local storage , retrieve when the page loads.
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+Database
+You can send an AJAX request to some backend code that gets the request data and connects into a database.  
+You would need to setup an endpoint that takes POST. Keep in mind many security issues with passing Frontend values to the backend as it can be easily replicated with a GET or POST so you need proper headers and ensure that the connection is secure enough.

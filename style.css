@@ -15,6 +15,7 @@
 #message {
   text-align: center;
   padding: 20px;
+  font-family:"Comic Sans MS", cursive, sans-serif; 
 }
 
 .btn {
@@ -23,7 +24,8 @@
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Arial;
+  font-family:"Comic Sans MS", cursive, sans-serif; 
+  
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
