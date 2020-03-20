@@ -1,7 +1,12 @@
-Score
-You can set a variable and store it to local storage , retrieve when the page loads.
-https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+for (var i = 0; i < 10; i++) {
+    document.write("<td></td>");
+    if (i % 4 == 3) {
+        document.write("</tr><tr>");
+    }
+}
+//  to check for next row and build a table for the images.
 
-Database
-You can send an AJAX request to some backend code that gets the request data and connects into a database.  
-You would need to setup an endpoint that takes POST. Keep in mind many security issues with passing Frontend values to the backend as it can be easily replicated with a GET or POST so you need proper headers and ensure that the connection is secure enough.
+document.write outputs directly when the JavaScript is run, we could build the HTML and then add to an Element 
+by selecting the element like document.querySelector('.elemenetClass').innerHTML =
+
+//current images aligned by width and inline-block class

@@ -1,0 +1,64 @@
+.column_container {
+    background-color: ivory;
+    display: flex;
+}
+.fixed {
+    	width: 15rem;
+        background-color: lavender;
+        border: 0.2rem solid black;
+	border-radius: 2em;
+}
+.flex {
+	flex:1 0 200px;
+    	flex-wrap:wrap;
+    	background-color: lightpink;
+        border-right: 0.2rem solid black;
+	border-radius: 2em;
+}
+.flex2 {
+	flex:1 0 200px;
+    	flex-wrap:wrap;	
+	background-color: pink;
+        border-right: 0.2rem solid black;
+	border-radius: 2em;
+}
+
+h1
+{
+	font-style: italic;	
+}
+img
+{
+	width: 100px;
+	height: 100px;
+	margin:5px;
+}
+.right
+{
+	float:right;
+	margin:5px;
+}
+.left
+{
+	float:left;
+	margin:5px;
+}
+header{
+       display: flex;
+       align-items:center;
+       background-color: lightgray;
+}
+
+header section  {
+      flex:1;
+}
+
+footer{
+       display: flex;
+       align-items:center;
+       background-color: lightgray;
+}
+
+footer section  {
+      flex:1;
+}

@@ -3,6 +3,10 @@ var tileArray = [];
 var tileFlippedOver = [];
 var cardFlipped = -1;// Starts here cos array's start at 0
 var timer = '';
+//game timer
+var second = 0, minute = 0;
+var counter = document.getElementById("counter");
+var interval;
 var playLockout = false;
 var gamePlay = false; // controls if we rebuild the board restart
 
@@ -19,6 +23,7 @@ startButton.addEventListener('click', startGame);
 //when we want to start the game
 
 function startGame() {
+
   cardFlipped = -1;
   playLockout = false;
   //Dissapears when the button is clicked
@@ -40,6 +45,7 @@ function buildArray() {
 	//loads our images dynamically into an array
   }
 }
+
 function buildBoard() {
   var html = "";
   //loops while x is less than or equal to the value in our array
@@ -78,6 +84,21 @@ function pickCard(tileIndex, t) {
   } else {
     message.innerHTML = "Not clickable";
   }
+}
+
+function startCounter(){
+  interval = setInterval(function(){
+  counter.innerHTML = minute+"mins "+second+"secs";
+  second++;
+  if(second == 60){
+  minute++;
+  second = 0;
+  }
+  if(minute == 60){
+  hour++;
+  minute = 0;
+  }
+  },1000);
 }
 
 function hideCard() {
