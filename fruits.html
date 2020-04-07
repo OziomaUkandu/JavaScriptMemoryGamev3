@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset= "utf-8">
-<title>Memory Games</title>
-<style>
+  <title>Memory Game-Animals</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
 @import"css/main.css";
 @import"css/nav.css";
 </style>
-
+</head>
 <body>
+
 <header>
 
 <section>
@@ -31,7 +32,6 @@
   </ul>
 </nav>
 
-
 <div class = "column_container">
 <section class="fixed">
 <h4>Fixed Section</h4>
@@ -40,28 +40,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel libero 
 <br>
 Suspendisse vitae neque pharetra est ornare tincidunt non eget arcu. Vivamus cursus faucibus elit ut laoreet. Nunc nec ante faucibus metus viverra egestas.
 </p>
-</section>
+</section> 
 
-<section class="flex">
 
-<h4>Flex Section</h4>
-   <img class = "right" src= "images/d8.png" alt="dino">
-<ul>
-<li>Lorem ipsum dolor sit amet</li>
-<li>Aenean viverra mi quis felis</li>
-<li>Quisque ut odio mi, blandit</li>
-<li>Fusce lacinia aliquet purus</li>
-<li>Aliquam vestibulum libero</li>
-</ul>
-
-<img class = "left" src= "images/d10.png" alt="dino">
-<ol>
-<li>Lorem ipsum dolor sit amet</li>
-<li>Aenean viverra mi quis felis</li>
-<li>Quisque ut odio mi, blandit</li>
-<li>Fusce lacinia aliquet purus</li>
-<li>Aliquam vestibulum libero</li>
-</ol>
+<section class="flex2">
+  <div id="wrapper">
+    <div id="start" class="btn">Start</div>
+    <div id="score"></div>
+    <div id="message"></div>
+	<div id="counter"></div>
+    <div style="main"><div id="gameboard"></div></div>
+  </div>
+  <script src="fruitscript.js"></script> 
 </section>
 
 <section class="flex2">
@@ -73,27 +63,12 @@ Ita nemo beato beatior. Duo Reges: constructio interrete.
 </p>
 </section>
 
-<section class="flex2">
-<h4>Flex Section</h4>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt.
-Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est.
-Ita nemo beato beatior. Duo Reges: constructio interrete.
-</p>
-</section>
+  
+  
 
-</div>
-<footer>
-<section>
-       Copyright &copy; 2019-2020
-</section>
-<section>
-       <img src= "images/dinosaur.png" alt="dino">
-</section>
-<section>
-       Fantastic Memory Games Limited, Dublin, Ireland.
-</section>
-
-</footer>
+  
 </body>
+
+
+
 </html>
