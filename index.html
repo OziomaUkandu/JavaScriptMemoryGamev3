@@ -58,6 +58,7 @@
 
 	}
 
+
 	 </style
 
 </head>
@@ -78,6 +79,18 @@
 
    <div id="gameboard"></div>
 
+   <text>Turns:<text id ="time001">25</text></text>
+
+   <p id="message001"></p>
+
+   <p id="message002"></p>
+
+    <p id="message003"></p>
+
+   <p id="message004"></p>
+
+
+
 </div>
 
 
@@ -89,6 +102,10 @@ var tileImages = [];
 var tileArray = [];
 
 var tileFlippedOver = [];
+
+var GameScore = 0 ;
+
+var Level = 0;
 
 var cardFlipped = -1;
 
@@ -103,6 +120,10 @@ var gameBoard = document.getElementById('gameboard');
 var gamePlay = false;
 
 var message = document.getElementById('message');
+
+
+
+
 
 
 
@@ -123,6 +144,9 @@ tileFlippedOver = [];
 
 
 function startGame(){
+
+c = 25;
+
 
 cardFlipped = -1;
 
@@ -212,6 +236,12 @@ if(!isinArray(t.id,tileFlippedOver) &&  !playLockout ){
 
           playLockout = true;
 
+          //GameScore = GameScore + 1;
+
+          //text("Score:" + GameScore,20,20);
+
+
+
           if(checkSrc(tileFlippedOver[tileFlippedOver.length-1]) == checkSrc(tileFlippedOver[tileFlippedOver.length-2])){
 
           message.innerHTML ="Match Found. Click more tiles";
@@ -247,6 +277,22 @@ if(!isinArray(t.id,tileFlippedOver) &&  !playLockout ){
       }else{
 	        message.innerHTML = "Not clickable";
       }
+      function timer001() {
+	              c = c - 1;
+	              if (c < 25) {
+	                  time001.innerHTML = c;
+            }
+	         if (c < 1) {
+
+
+                gameover();
+
+
+
+
+	        }
+	      }
+    update = setInterval(timer001(), 1000);
     }
     function buildArray() {
       for (var x = 1; x < 7; x++) {
@@ -260,6 +306,8 @@ if(!isinArray(t.id,tileFlippedOver) &&  !playLockout ){
         array[x] = array[holder];
         array[holder] = itemValue;
       }
+
+
       return array;
     }
   </script>

@@ -1,0 +1,38 @@
+nav{
+	padding: 20px;
+	clear: both;
+}
+nav ul{
+	display:flex;
+	flex-wrap:wrap;
+	margin: 0;
+	padding: 0;
+	}
+nav li
+{
+	list-style-type: none;
+	flex:1 0 200px;
+}
+
+nav a
+{	
+	display: block;
+	padding: 0.3rem;
+	border: 0.3rem solid black;
+	border-radius: 2em;
+	text-decoration: none;
+	text-align: center;
+	background-color: pink;
+	color:blue;
+}
+nav a:hover
+{
+	background-color: gray;
+	color: white;
+}
+.current_page
+{
+	background-color: yellow;
+	color: red;
+	font-weight: bold;
+}

@@ -1,0 +1,26 @@
+
+#calling function
+buildArray(9, 'animal')    (-- if user picks easy)
+buildArray(17, 'animal') - if user picks hard
+buildArray(17, 'flag') - if user picks hard
+
+#function
+function buildArray(size) {
+for (var x = 1; x<size,x++) {
+ tileimages.push('image'+x+'.jpg'):
+
+43
+
+function buildArray(size, picType) {
+for (var x = 1; x<size,x++) {
+ if picType='animal' then {
+   tileimages.push('image'+x+'.jpg'):
+else
+ tileimages.push(x+'.jpg'):
+end if
+
+
+#gameboard before{
+  margin: 0 auto;
+  width: 610px;
+}
