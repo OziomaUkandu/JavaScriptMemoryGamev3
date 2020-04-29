@@ -64,26 +64,22 @@ a {
 </head>
 <body>
 
-<form action="login.html" method="post">
+
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create a European Flag game account! :)</p>
-    
 
+    <form action="connect.php" action="POST">
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password"id = "psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password"id = "password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 	title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-	
-    <sql:setDataSource var="myDS" driver="com.mysql.jdbc.Driver"
-    url="mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}" user="root" password="pass" />
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" id = "psw-repeat"  name="psw-repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+    <label for="password-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" id = "password-repeat"  name="password-repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
 	title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-	
 
 
     <button type="submit" class="registerbtn">Register</button>

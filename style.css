@@ -1,34 +1,49 @@
-
-body{
-    background: linear-gradient(rgba(0, 0, 50,0.5),rgba(0, 0, 50,0.5)),url("img.jpg");
-    background-size: cover;
-    background-color: grey;
-    background-position: center;
-
+#wrapper {
+  width: 800px;
 }
 
-.login-box{
-
-    max-width: 700px;
-    float: none;
-    margin:150px auto;
+.main {
+  width: 100%;
+  border: 1px solid black;
 }
 
-.login-left{
-
-
-    background: rgba(211, 211, 211,0.5);
-    padding: 30px;
-
-
+#gameboard {
+  margin: 0 auto;
+  width: 800px;
 }
 
-.login-right{
- background:yellow;
-    padding:30px;
-
+#message {
+  text-align: center;
+  padding: 20px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; 
 }
-.form-control{
 
-    background-color: transparent !important;
+.btn {
+  background: #3498db;
+  text-align: center;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+  
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+.flipImage {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.gameTile {
+  padding: 2px;
+  width: 196px;
+  display: inline-block;
 }
