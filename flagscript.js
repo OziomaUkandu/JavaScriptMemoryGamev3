@@ -31,9 +31,13 @@ function startGame() {
   if (!gamePlay) {
     gamePlay = true;
     buildArray();
-	buildArray(9, 'animal')   // (-- if user picks easy)
+	buildArray(9, '') //- if user picks easy
+    buildArray(17, '') //- if user picks hard
+	buildArray(9, 'animal')   // - if user picks easy
     buildArray(17, 'animal') //- if user picks hard
-    buildArray(17, 'flag') //- if user picks hard
+	buildArray(9, 'fruit') //- if user picks easy
+    buildArray(17, 'fruit') //- if user picks hard
+	
     tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
     buildBoard();
@@ -45,10 +49,11 @@ function startGame() {
 function buildArray(size, picType) {
 for (var x = 1; x<size,x++) {
  if picType='animal' then {
-   tileimages.push('image'+x+'.jpg'):
-else
- tileimages.push(x+'.jpg'):
-end if
+   tileimages.push('image'+x+'.jpg');
+else if
+ tileimages.push(x+'.jpg');
+else 
+  tileimages.push('fruit' +x+ '.jpg');
 
 function buildBoard() {
   var html = "";
