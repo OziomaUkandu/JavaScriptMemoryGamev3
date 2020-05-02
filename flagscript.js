@@ -23,7 +23,6 @@ startButton.addEventListener('click', startGame);
 //when we want to start the game
 
 function startGame() {
-
   cardFlipped = -1;
   playLockout = false;
   //Dissapears when the button is clicked
@@ -31,13 +30,6 @@ function startGame() {
   if (!gamePlay) {
     gamePlay = true;
     buildArray();
-	buildArray(9, '') //- if user picks easy
-    buildArray(17, '') //- if user picks hard
-	buildArray(9, 'animal')   // - if user picks easy
-    buildArray(17, 'animal') //- if user picks hard
-	buildArray(9, 'fruit') //- if user picks easy
-    buildArray(17, 'fruit') //- if user picks hard
-	
     tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
     buildBoard();
@@ -46,15 +38,19 @@ function startGame() {
 }
 
 
-function buildArray(size, picType) {
-for (var x = 1; x<size,x++) {
- if picType='animal' then {
-   tileimages.push('image'+x+'.jpg');
-else if
- tileimages.push(x+'.jpg');
-else 
-  tileimages.push('fruit' +x+ '.jpg');
+function buildArray() {
+  for (var x = 1; x < 7; x++) {
+    tileImages.push('' +x+ '.jpg');
+	//loads the images dynamically into an array
+  }
+ // for (var i = 0; i < 10; i++) {
+   // document.write("<td></td>");
+    //if (i % 4 == 3) {
+      //  document.write("</tr><tr>");
+    //}
+//}
 
+}
 function buildBoard() {
   var html = "";
   //loops while x is less than or equal to the value in our array

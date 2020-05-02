@@ -43,13 +43,6 @@ function buildArray() {
     tileImages.push('image' +x+ '.jpg');
 	//loads the images dynamically into an array
   }
- // for (var i = 0; i < 10; i++) {
-   // document.write("<td></td>");
-    //if (i % 4 == 3) {
-      //  document.write("</tr><tr>");
-    //}
-//}
-
 }
 function buildBoard() {
   var html = "";

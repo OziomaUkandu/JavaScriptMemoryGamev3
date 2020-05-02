@@ -39,16 +39,11 @@ function startGame() {
 
 
 function buildArray() {
-  for (var x = 1; x < 9; x++) {
+  for (var x = 1; x < 17; x++) {
     tileImages.push('fruit' +x+ '.jpg');
 	//loads the images dynamically into an array
   }
- // for (var i = 0; i < 10; i++) {
-   // document.write("<td></td>");
-    //if (i % 4 == 3) {
-      //  document.write("</tr><tr>");
-    //}
-//}
+
 
 }
 function buildBoard() {
