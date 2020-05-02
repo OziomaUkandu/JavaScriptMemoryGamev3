@@ -39,7 +39,7 @@ function startGame() {
 
 
 function buildArray() {
-  for (var x = 1; x < 17; x++) {
+  for (var x = 1; x < 7; x++) {
     tileImages.push('fruit' +x+ '.jpg');
 	//loads the images dynamically into an array
   }
