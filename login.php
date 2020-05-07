@@ -3,7 +3,7 @@
 
 
     <title> User Login and Registration</title>
-    <link rel="stylesheet" type="text/css" href="style.css"
+    <link rel="stylesheet" type="text/css" href="style1.css"
     <link rel="stylesheet" type="text/css"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 
