@@ -30,7 +30,7 @@ function startGame() {
   if (!gamePlay) {
     gamePlay = true;
     buildArray();
-    tileArray = tileImages.concat(tileImages);
+   // tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
     buildBoard();
     message.innerHTML = "Click any tile";
